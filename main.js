@@ -1,4 +1,4 @@
-//From years in array check for leap years [1974, 1900, 1985, 2000]
+//1 From years in array check for leap years [1974, 1900, 1985, 2000]
 let tabA = [1974, 1900, 1985, 2000];
 
 for (let i = 0; i < tabA.length; i++) {
@@ -18,13 +18,28 @@ let factorial = (n) => {
 };
 let n = 7;
 answer = factorial(n);
-console.log("The factorial of " + n + " is " + answer);
+console.log(`The factorial of  ${n} is  ${answer}`);
 
 //3 Calculate the sum of the odd items
-let arre = [1, 6, 23, 8, 4, 98, 3, 7, 3, 98, 4, 98];
+let arrOdd = [1, 6, 23, 8, 4, 98, 3, 7, 3, 98, 4, 98];
 
-let odds = arre.filter((n) => n % 2);
+let odds = arrOdd.filter((n) => n % 2);
 console.log(odds);
+
+let sum = 0;
+
+odds.forEach((el) => {
+  sum += el;
+});
+
+console.log(`Sum odd = ${sum}`);
+
+//4 Choose highest and lowest values from the given array. [1,6,23,8,4,98,3,7,3,98,4,98].
+const arrMinMax = [1, 6, 23, 8, 4, 98, 3, 7, 3, 98, 4, 98];
+
+console.log(
+  `Min value: ${Math.min(...arrMinMax)}, Max value: ${Math.max(...arrMinMax)}`
+);
 
 //5 Choose longest string from the array.
 const arr = ["Karol", "Adam", "Rogowski", "Politechnika", "Super", "Weekend"];
@@ -34,13 +49,6 @@ arr.sort(function (a, b) {
 });
 console.log(arr[0]);
 
-//4 Choose highest and lowest values from the given array. [1,6,23,8,4,98,3,7,3,98,4,98].
-const arrMinMax = [1, 6, 23, 8, 4, 98, 3, 7, 3, 98, 4, 98];
-
-console.log(
-  `Min value: ${Math.min(...arrMinMax)}, Max value: ${Math.max(...arrMinMax)}`
-);
-
 //6 Choose all the indexes on the highest value from the given array. [1,6,23,8,4,98,3,7,3,98,4,98].
 let arrAll = [1, 6, 23, 8, 4, 98, 3, 7, 3, 98, 4, 98];
 let max = Math.max(...arrAll);
@@ -49,7 +57,21 @@ let allIndex = [];
 for (let i = 0; i < arrAll.length; i++) {
   if (arrAll[i] === max) {
     allIndex.push(i);
-    console.log(`${i} : ${arrAll[i]}`);
+    console.log(`index ${i} : ${arrAll[i]}`);
   }
 }
 console.log(`All hightest values has index: ${allIndex}`);
+
+// Calculate average value from the given array for even numbers [1,6,23,8,4,98,3,7,3,98,4,98];
+var arrEven = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+var evenNumbers = arrEven.filter((item) => item % 2 == 0);
+console.log(evenNumbers);
+
+let sumEven = 0;
+evenNumbers.forEach((el) => (sumEven += el));
+console.log(
+  `Average value from the given array for even numbers is ${
+    sumEven / evenNumbers.length
+  }`
+);
