@@ -78,7 +78,7 @@ console.log(
 
 //let sumEvenIndex = sumEven - evenNumbers.shift();
 //console.log(sumEvenIndex / (evenNumbers.length - 1));
-
+//8
 let arrSumEvenIndex = [];
 let sumEvenIndex = 0;
 for (let i = 0; i < arrEven.length; i++) {
@@ -91,3 +91,17 @@ for (let i = 0; i < arrEven.length; i++) {
 
 console.log(arrSumEvenIndex);
 console.log(`Index srednia =${sumEvenIndex / (arrSumEvenIndex.length - 1)}`);
+
+//9 With a given start value of 0. Iterate the array and add even items and subtract odd ones. [1,6,23,8,4,98,3,7,3,98,4,98]
+
+let sumAddEven = 0;
+
+for (let i = 0; i < arrEven.length; i++) {
+  if (arrEven[i] % 2 == 0) {
+    sumAddEven += arrEven[i];
+  } else {
+    sumAddEven -= arrEven[i];
+  }
+}
+
+console.log(sumAddEven);
