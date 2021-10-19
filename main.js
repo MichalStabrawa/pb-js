@@ -62,10 +62,10 @@ for (let i = 0; i < arrAll.length; i++) {
 }
 console.log(`All hightest values has index: ${allIndex}`);
 
-// Calculate average value from the given array for even numbers [1,6,23,8,4,98,3,7,3,98,4,98];
-var arrEven = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+//7 Calculate average value from the given array for even numbers [1,6,23,8,4,98,3,7,3,98,4,98];
+let arrEven = [1, 6, 23, 8, 4, 98, 3, 7, 3, 98, 4, 98];
 
-var evenNumbers = arrEven.filter((item) => item % 2 == 0);
+let evenNumbers = arrEven.filter((item) => item % 2 == 0);
 console.log(evenNumbers);
 
 let sumEven = 0;
@@ -75,3 +75,19 @@ console.log(
     sumEven / evenNumbers.length
   }`
 );
+
+//let sumEvenIndex = sumEven - evenNumbers.shift();
+//console.log(sumEvenIndex / (evenNumbers.length - 1));
+
+let arrSumEvenIndex = [];
+let sumEvenIndex = 0;
+for (let i = 0; i < arrEven.length; i++) {
+  if (i % 2 == 0) {
+    arrSumEvenIndex.push(arrEven[i]);
+
+    sumEvenIndex += arrEven[i];
+  }
+}
+
+console.log(arrSumEvenIndex);
+console.log(`Index srednia =${sumEvenIndex / (arrSumEvenIndex.length - 1)}`);
