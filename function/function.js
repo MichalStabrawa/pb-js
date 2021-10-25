@@ -20,7 +20,9 @@ let getSumFirstLastElement = (arr) => {
   return sum;
 };
 
-console.log(getSumFirstLastElement(arr) + " " + "2zadanie");
+console.log(
+  getSumFirstLastElement(arr) + " " + "" + "is sum of first and last element"
+);
 
 //3)Arr
 
@@ -50,5 +52,24 @@ const reverseArr = (el) => {
   return arrReverse;
 };
 
-let c = reverseArr(arr);
-console.log(c);
+console.log(reverseArr(arr));
+//5
+let arrSumAdd = [];
+let arrSumOdd = [];
+const sumsecondElement = (el) => {
+  el.forEach((item, index) => {
+    if (index % 2 === 0) {
+      arrSumAdd.push(item);
+    } else {
+      arrSumOdd.push(item);
+    }
+  });
+};
+
+sumsecondElement(arr);
+
+console.log(arrSumAdd);
+console.log(arrSumOdd);
+
+const arrNew = [...arrSumAdd].map((el, i) => el + arrSumOdd[i]);
+console.log(arrNew);
