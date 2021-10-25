@@ -53,7 +53,9 @@ const reverseArr = (el) => {
 };
 
 console.log(reverseArr(arr));
+
 //5
+
 let arrSumAdd = [];
 let arrSumOdd = [];
 const sumsecondElement = (el) => {
@@ -67,9 +69,6 @@ const sumsecondElement = (el) => {
 };
 
 sumsecondElement(arr);
-
-console.log(arrSumAdd);
-console.log(arrSumOdd);
 
 const arrNew = [...arrSumAdd].map((el, i) => el + arrSumOdd[i]);
 console.log(arrNew);
