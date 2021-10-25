@@ -34,8 +34,21 @@ function factorial(n) {
 
 function ittArr(arr) {
   for (let i = 0; i < arr.length; i++) {
-    console.log(factorial(arr[i]));
+    console.log(`Factorial with ${arr[i]} is ${factorial(arr[i])}`);
   }
 }
 
 ittArr(arr);
+
+//4
+
+const reverseArr = (el) => {
+  let arrReverse = [];
+  for (var i = el.length - 1; i >= 0; i--) {
+    arrReverse.push(el[i]);
+  }
+  return arrReverse;
+};
+
+let c = reverseArr(arr);
+console.log(c);
