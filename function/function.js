@@ -72,3 +72,31 @@ sumsecondElement(arr);
 
 const arrNew = [...arrSumAdd].map((el, i) => el + arrSumOdd[i]);
 console.log(arrNew);
+
+//6 [1, 6, 23, 8, 4, 8, 3, 7]; 6)	For time of this example remove last element from the given array. Create a function that based on given array return new array in pattern [a,b,c,d,e] -> [a+b, c+d, e+e]
+
+let arrLastIndex = [...arr];
+arrLastIndex.pop();
+
+let arrSumAddPop = [];
+let arrSumOddPop = [];
+
+const sumSecondElementDeleted = (el) => {
+  el.forEach((item, index) => {
+    if (index % 2 === 0) {
+      arrSumAddPop.push(item);
+    } else {
+      arrSumOddPop.push(item);
+    }
+  });
+
+  if (arrSumAddPop.length > arrSumOddPop.length) {
+    let lastIndex = arrSumAddPop[arrSumAddPop.length - 1];
+    arrSumOddPop.push(lastIndex);
+  }
+};
+
+sumSecondElementDeleted(arrLastIndex);
+
+const arrNew2 = [...arrSumAddPop].map((el, i) => el + arrSumOddPop[i]);
+console.log(arrNew2);
