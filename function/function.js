@@ -122,3 +122,66 @@ const randomLessNumber = (arr, item) => {
 randomLessNumber(arr, 4);
 console.log(tabMin);
 console.log(Math.min(...tabMin));
+
+//9 arr[1, 6, 23, 8, 4, 8, 3, 7]
+const arrDe = ["Pawel", "Ann", "Bole", "Seb", "jeb", "Zjeb", "Null", "Full"];
+let tabRandom = [];
+let deletedSlice = [];
+const randomDeleteItem = (a) => {
+  for (let i = 0; i < a.length; i++) {
+    // let random3 = Math.floor(Math.random() * a.length);
+    //let b = a[random3];
+    // let j = a.indexOf(b);
+
+    tabRandom.push(a[i]);
+    arrDe.splice(i, 1);
+  }
+};
+
+randomDeleteItem(arrDe);
+console.log(tabRandom);
+console.log(arrDe);
+console.log(deletedSlice);
+
+// 11)	Create a function that will return the current day name in Polish
+const days2 = [
+  "Niedziela",
+  "Poniedzialek",
+  "Wtorek",
+  "Sroda", //etc
+  "Czwartek",
+  "Piatek",
+  "Sobota",
+];
+
+console.log(days2[new Date().getDay()]);
+
+//13 13)	Create a function that take two numbers and return the object with 4 fields.
+//Result on 4 basic arithmetic operations.
+
+const createObj = (a, b) => {
+  let obj = {
+    a: a,
+    b: b,
+    add() {
+      return a + b;
+    },
+    sub() {
+      return a - b;
+    },
+    multip() {
+      return a * b;
+    },
+    division() {
+      return a / b;
+    },
+  };
+  return obj;
+};
+
+let a = createObj(10, 20);
+
+console.log(a.add());
+console.log(a.sub());
+console.log(a.multip());
+console.log(a.division());
