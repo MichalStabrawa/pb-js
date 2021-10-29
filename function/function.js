@@ -124,17 +124,17 @@ console.log(tabMin);
 console.log(Math.min(...tabMin));
 
 //9 arr[1, 6, 23, 8, 4, 8, 3, 7]
-const arrDe = ["Pawel", "Ann", "Bole", "Seb", "jeb", "Zjeb", "Null", "Full"];
+const arrDe = [1, 6, 23, 8, 4, 8, 3, 7];
 let tabRandom = [];
-let deletedSlice = [];
+let deletedSlice = arrDe.length;
 const randomDeleteItem = (a) => {
-  for (let i = 0; i < a.length; i++) {
-    // let random3 = Math.floor(Math.random() * a.length);
-    //let b = a[random3];
-    // let j = a.indexOf(b);
-
-    tabRandom.push(a[i]);
-    arrDe.splice(i, 1);
+  let i = 0;
+  while (i < a.length) {
+    let random3 = Math.floor(Math.random() * a.length);
+    let b = a[random3];
+    let j = a.indexOf(b);
+    tabRandom.push(b);
+    arrDe.splice(j, 1);
   }
 };
 
