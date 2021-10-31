@@ -199,7 +199,7 @@ const howManyDayToFriday = () => {
   }
 };
 
-console.log(howManyDayToFriday());
+howManyDayToFriday();
 
 //13 13)	Create a function that take two numbers and return the object with 4 fields.
 //Result on 4 basic arithmetic operations.
