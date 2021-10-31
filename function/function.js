@@ -143,6 +143,32 @@ console.log(tabRandom);
 console.log(arrDe);
 console.log(deletedSlice);
 
+//10 	Create a function that on given array will perform operation of adding or subtracting elements.
+// Operation is to be chosen at random. And return a result.[a,b,c,d] =>(((a+-b)+-c)+-d)
+const arrRandom = [1, 6, 23, 8, 4, 8, 3, 7];
+const element = ["+", "-"];
+const randomAddOdd = (el) => {
+  let result = 0;
+
+  el.map((item, index) => {
+    let randomShow = Math.floor(Math.random() * element.length);
+    console.log(randomShow);
+    if (index == 0) {
+      result += item;
+    } else {
+      if (randomShow === 0) {
+        result += item;
+      } else {
+        result -= item;
+      }
+    }
+  });
+
+  console.log(result);
+};
+
+randomAddOdd(arrRandom);
+
 // 11)	Create a function that will return the current day name in Polish
 const days2 = [
   "Niedziela",
