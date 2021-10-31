@@ -181,6 +181,25 @@ const days2 = [
 ];
 
 console.log(days2[new Date().getDay()]);
+console.log(days2.indexOf(days2[new Date().getDay()]));
+
+//12	Create a function that tells us how many days till Friday
+let curantlyDay = days2[new Date().getDay()];
+const howManyDayToFriday = () => {
+  if (days2.indexOf(curantlyDay) == 5) {
+    console.log(
+      `Zostało do piątku ${days2.length - 2 - days2.indexOf(curantlyDay)}`
+    );
+  } else if (days2.indexOf(curantlyDay) < 5) {
+    console.log(
+      `Zostało do piątku ${days2.length - 2 - days2.indexOf(curantlyDay)}`
+    );
+  } else {
+    `Zostało do piatku ${days2.length - 1}`;
+  }
+};
+
+console.log(howManyDayToFriday());
 
 //13 13)	Create a function that take two numbers and return the object with 4 fields.
 //Result on 4 basic arithmetic operations.
