@@ -123,7 +123,7 @@ randomLessNumber(arr, 4);
 console.log(tabMin);
 console.log(Math.min(...tabMin));
 
-//9 arr[1, 6, 23, 8, 4, 8, 3, 7]
+//9  arr[1, 6, 23, 8, 4, 8, 3, 7]
 const arrDe = [1, 6, 23, 8, 4, 8, 3, 7];
 let tabRandom = [];
 let deletedSlice = arrDe.length;
