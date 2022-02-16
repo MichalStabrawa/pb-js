@@ -1,4 +1,4 @@
-const tab = [1, 1, 1, 1, 1, 1, 1, 2];
+const tab = [1, 1, 1, 1, 2, 1, 1, 1];
 
 const startGame = () => {
     const allIndexArray = [0, 1, 2, 3, 4, 5, 6, 7];
