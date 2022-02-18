@@ -1,8 +1,9 @@
-const tab = [1, 1, 1, 1, 2, 1, 1, 1];
+const tab = [1, 1, 1, 1, 2, 1, 1, 1]; //tablica z kulami
 
 const startGame = () => {
     const allIndexArray = [0, 1, 2, 3, 4, 5, 6, 7];
-    let firstArrayLength = tab.length;
+    let firstArrayLength = tab.length; //pierwsza poczatkowa długosc tablicy
+    //3 zmienne do do porównania w dwoch ruchach z 3
     let compare1 = [];
     let compare2 = [];
     let compare3 = [];
@@ -18,8 +19,8 @@ const startGame = () => {
         console.log(randomIndexShow);
 
         let obj = {
-            index: allIndexArray[randomIndexShow],
-            value: tab[allIndexArray[randomIndexShow]],
+            index: allIndexArray[randomIndexShow], //randomowy index
+            value: tab[allIndexArray[randomIndexShow]], //umieszczenie kuli
         };
 
         if (firstArrayLength - 3 < allIndexArray.length) {
@@ -32,7 +33,7 @@ const startGame = () => {
         } else {
             compare3.push(obj);
         }
-        allIndexArray.splice(randomIndexShow, 1);
+        allIndexArray.splice(randomIndexShow, 1); //usuwamy element
         console.log(`Tablica głowna ${allIndexArray}`);
     }
 
